@@ -1,17 +1,20 @@
 # Robot arm lifting a deformable plastic cup with a cube inside (MuJoCo)
 
 **Simulation Engineer assignment: ET Robotics**
-Candidate: `<your name>` · Videos: `<Google Drive link>`
+Candidate: `Anshul Mittal` · Videos: [Google Drive](https://drive.google.com/drive/folders/1fN-V7oZd4qY2uzjdq974dEAJZ_lkX0u1)
 
 A Franka Emika Panda arm picks a thin-walled (0.5 mm) plastic cup **vertically** while a cube sits inside it.
 There are three trials, with cube masses of **10 g, 100 g and 500 g**. For each trial the simulation studies:
 
-| # | Objective | Output |
+| # | Objective | Plots (`results/<trial>/`) |
 |---|-----------|--------|
-| 1 | Cup-surface deformation when the gripper squeezes the walls with the cup on the ground | `deformation.png`, video `obj1_grasp_on_ground.mp4` |
-| 2 | Cup-surface deformation while the robot lifts the cup vertically | `deformation.png`, video `obj2_lift.mp4` |
-| 3 | Deformation of the cup bottom during the pick | `deformation.png`, video `obj3_bottom.mp4` |
-| 4 | Friction behaviour as the cup deforms | `friction.png`, `friction_vs_deformation.png`, video `obj4_friction.mp4` |
+| 1 | Cup-surface deformation when the gripper squeezes the walls with the cup on the ground | `deformation.png` |
+| 2 | Cup-surface deformation while the robot lifts the cup vertically | `deformation.png` |
+| 3 | Deformation of the cup bottom during the pick | `deformation.png` |
+| 4 | Friction behaviour as the cup deforms | `friction.png`, `friction_vs_deformation.png` |
+
+There is one video per trial (10 g, 100 g, 500 g). Each one shows the complete pick, and the camera changes for
+each objective (see section 3, step 3).
 
 ---
 
@@ -26,7 +29,7 @@ There are three trials, with cube masses of **10 g, 100 g and 500 g**. For each 
 ## 2. Installation
 
 ```bash
-git clone <repository-url> cup_sim
+git clone https://github.com/anshul1996mittal/MuJoCo_cup_sim.git cup_sim
 cd cup_sim
 python3 -m venv .venv
 source .venv/bin/activate
@@ -52,14 +55,16 @@ python run_all.py
 
 The script prints a summary table at the end. It is also written to `results/summary.md`.
 
-**Step 3: watch a trial in the MuJoCo viewer.** Replay a finished trial at real-time speed, with the deformation
-shown as a colour heat map on the cup:
+**Step 3: watch a trial in the MuJoCo viewer.** Replay a finished trial, with the deformation shown as a colour
+heat map on the cup (blue = none, red = largest):
 
 ```bash
-python replay.py results/500g
+python replay.py results/500g --speed 0.5
 ```
 
-Add `--loop` to repeat it, or `--speed 0.25` for slow motion.
+The camera follows the task: overview (approach), front (objective 1, squeeze on the ground), iso (objective 2,
+lift), bottom with the floor hidden (objective 3), then a close-up of a finger with contact points and forces
+(objective 4, release). `--speed 0.5` plays in slow motion. `--wait 5` pauses 5 s before playing.
 
 **Other commands**
 
