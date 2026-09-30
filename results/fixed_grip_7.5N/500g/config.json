@@ -1,0 +1,68 @@
+{
+  "cup": {
+    "r_bottom": 0.025,
+    "r_top": 0.036,
+    "height": 0.085,
+    "thickness": 0.0005,
+    "young": 1500000000.0,
+    "poisson": 0.42,
+    "density": 905.0,
+    "damping": 0.0002,
+    "rest_shape_correction": true,
+    "calibrate_bending": true,
+    "n_theta": 24,
+    "n_wall": 8,
+    "n_bottom": 3,
+    "mu_finger": 0.5,
+    "solref": [
+      0.002,
+      1.0
+    ],
+    "solimp": [
+      0.99,
+      0.999,
+      0.0005,
+      0.5,
+      2.0
+    ]
+  },
+  "cube": {
+    "size": 0.03,
+    "mass": 0.5,
+    "mu_cup": 0.4
+  },
+  "task": {
+    "cup_xy": [
+      0.55,
+      0.0
+    ],
+    "grasp_height": 0.055,
+    "lift_height": 0.1,
+    "approach_height": 0.08,
+    "grip_force": 7.5,
+    "grip_safety": 1.5,
+    "grip_force_min": 2.0,
+    "t_settle": 0.5,
+    "t_approach": 1.5,
+    "t_preclose": 0.6,
+    "t_squeeze": 1.5,
+    "t_hold_ground": 1.0,
+    "t_lift": 2.5,
+    "t_hold_air": 2.0,
+    "slip_test": true,
+    "t_release": 4.0
+  },
+  "sim": {
+    "timestep": 0.001,
+    "integrator": "discrete",
+    "solver": "Newton",
+    "cone": "elliptic",
+    "impratio": 100.0,
+    "log_hz": 200.0,
+    "video_fps": 30,
+    "video_size": [
+      960,
+      720
+    ]
+  }
+}

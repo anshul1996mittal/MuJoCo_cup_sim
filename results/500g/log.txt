@@ -1,0 +1,22 @@
+WARNING: Flex stiffness is too ill-conditioned for the effective-metric block preconditioner: the M+K solve ran out of iterations at a relative residual of 2.80e-03 and qacc_smooth is under-converged. Reported as a singular inertia below, because M+K is the effective inertia.
+
+WARNING: Inertia matrix is too close to singular at DOF 69. Check model. Time = 0.0000.
+
+WARNING: Flex stiffness is too ill-conditioned for the effective-metric block preconditioner: the M+K solve ran out of iterations at a relative residual of 2.81e-03 and qacc_smooth is under-converged. Reported as a singular inertia below, because M+K is the effective inertia.
+
+WARNING: Inertia matrix is too close to singular at DOF 69. Check model. Time = 0.0000.
+
+=== trial 500g: cube 500 g -> /home/anshul/Workspace/mujoco/Projects/cup_sim/results/500g
+    cup: 265 vertices, 8.29 g, wall 0.50 mm | grip force 7.48 N/finger | nv=810
+  [500g] t= 0.00s settle      wall=   0.0s (0.07x RT)  max|u|= 0.00mm grip= 0.00N
+  [500g] t= 1.00s approach    wall=  19.2s (0.05x RT)  max|u|= 0.20mm grip= 0.00N
+Traceback (most recent call last):
+  File "/home/anshul/Workspace/mujoco/Projects/cup_sim/run_trial.py", line 154, in <module>
+    sys.exit(main())
+  File "/home/anshul/Workspace/mujoco/Projects/cup_sim/run_trial.py", line 150, in main
+    run(name, mass, cfg, a.out, video=not a.no_video, viewer=a.viewer)
+  File "/home/anshul/Workspace/mujoco/Projects/cup_sim/run_trial.py", line 111, in run
+    L = trial.run(frame_dt=frame_dt)
+  File "/home/anshul/Workspace/mujoco/Projects/cup_sim/cupsim/sim.py", line 168, in run
+    mujoco.mj_step(m, d)
+KeyboardInterrupt

@@ -1,0 +1,68 @@
+WARNING: Flex stiffness is too ill-conditioned for the effective-metric block preconditioner: the M+K solve ran out of iterations at a relative residual of 2.80e-03 and qacc_smooth is under-converged. Reported as a singular inertia below, because M+K is the effective inertia.
+
+WARNING: Inertia matrix is too close to singular at DOF 69. Check model. Time = 0.0000.
+
+WARNING: Flex stiffness is too ill-conditioned for the effective-metric block preconditioner: the M+K solve ran out of iterations at a relative residual of 2.81e-03 and qacc_smooth is under-converged. Reported as a singular inertia below, because M+K is the effective inertia.
+
+WARNING: Inertia matrix is too close to singular at DOF 69. Check model. Time = 0.0000.
+
+=== trial 100g: cube 100 g -> results/fixed_grip_7.5N/100g
+    cup: 265 vertices, 8.29 g, wall 0.50 mm | grip force 7.50 N/finger | nv=810
+  [100g] t= 0.00s settle      wall=   0.0s (0.11x RT)  max|u|= 0.00mm grip= 0.00N
+  [100g] t= 1.00s approach    wall=   8.7s (0.11x RT)  max|u|= 0.05mm grip= 0.00N
+  [100g] t= 2.00s approach    wall=  17.5s (0.11x RT)  max|u|= 0.05mm grip= 0.00N
+  [100g] t= 3.00s squeeze     wall=  26.4s (0.11x RT)  max|u|= 0.44mm grip= 0.91N
+  [100g] t= 4.00s squeeze     wall=  46.8s (0.09x RT)  max|u|=13.28mm grip= 7.48N
+  [100g] t= 5.00s hold_ground wall=  56.3s (0.09x RT)  max|u|=14.43mm grip= 7.50N
+  [100g] t= 6.00s lift        wall=  65.9s (0.09x RT)  max|u|=14.88mm grip= 7.50N
+  [100g] t= 7.00s lift        wall=  75.0s (0.09x RT)  max|u|=14.88mm grip= 7.50N
+  [100g] t= 8.00s hold_air    wall=  84.2s (0.09x RT)  max|u|=14.88mm grip= 7.50N
+  [100g] t= 9.00s hold_air    wall=  92.5s (0.10x RT)  max|u|=14.88mm grip= 7.50N
+  [100g] t=10.00s release     wall= 100.5s (0.10x RT)  max|u|=13.46mm grip= 6.45N
+  [100g] t=11.00s release     wall= 110.2s (0.10x RT)  max|u|= 8.17mm grip= 3.83N
+  [100g] t=12.00s release     wall= 121.5s (0.10x RT)  max|u|= 4.27mm grip= 1.20N
+  [100g] t=13.00s release     wall= 146.2s (0.09x RT)  max|u|= 0.23mm grip=-1.42N
+    done in 156s. summary:
+      trial                                    100g
+      cube_mass_kg                             0.100
+      cup_mass_kg                              0.008
+      weight_N                                 1.062
+      grip_force_per_finger_N                  7.500
+      sim_wall_time_s                          156.485
+      gross_slip_detected                      True
+      wall_thickness_mm                        0.500
+      mu_finger_cup                            0.500
+      ground_normal_force_per_finger_N         7.493
+      ground_pad_indent_mm                     14.353
+      ground_width_y_mm                        43.507
+      ground_width_x_mm                        74.868
+      ground_max_disp_mm                       14.448
+      air_pad_indent_mm                        14.778
+      air_width_y_mm                           43.008
+      air_width_x_mm                           75.237
+      air_max_disp_mm                          14.879
+      lift_peak_max_disp_mm                    14.879
+      rest_width_mm                            63.205
+      ground_bottom_sag_mm                     0.546
+      air_bottom_sag_mm                        0.986
+      air_bottom_max_w_mm                      1.135
+      lift_peak_bottom_sag_mm                  0.986
+      air_cube_on_bottom_N                     0.982
+      air_normal_force_per_finger_N            7.500
+      air_friction_util                        0.142
+      lift_peak_friction_util                  0.488
+      air_friction_share_of_support            1.000
+      slip_after_lift_mm                       -0.170
+      sliding_distance_squeeze_mm              2.014
+      sliding_distance_lift_hold_mm            0.244
+      mu_plus_tan_taper                        0.629
+      tcp_lateral_deviation_during_lift_mm     0.454
+      rest_radius_at_pads_mm                   32.368
+      drop_detected                            True
+      release_friction_share_half_cmd_N        -0.309
+      release_coulomb_limit_cmd_N              -0.795
+      release_max_apparent_mu                  0.900
+      drop_time_s                              12.931
+      drop_grip_cmd_N                          -1.241
+      drop_finger_opening_mm                   32.752
+    (videos skipped - render later with: python make_videos.py results/fixed_grip_7.5N/100g)

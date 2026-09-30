@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+MUJOCO_LOG.TXT
+
+# generated at run time
+models/_generated_scene_*.xml
+models/.calibration_cache.json
+results/**/run.npz
+
+# local clone used only as the source of the Panda model (the needed files are in models/)
+mujoco_menagerie/
